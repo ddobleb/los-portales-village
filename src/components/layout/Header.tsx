@@ -67,9 +67,9 @@ export function Header({ title }: { title?: string }) {
       {/* Título + subtítulo */}
       <div className="flex-1 min-w-0">
         <h1 className="text-[17px] font-bold leading-tight truncate">{pageTitle}</h1>
-        {household && (
-          <p className="text-[11px] text-muted-foreground leading-tight truncate">{household.name}</p>
-        )}
+        <p className="text-[11px] text-muted-foreground leading-tight truncate">
+          {household?.name ?? ''} <span className="opacity-40">· v0.2.0</span>
+        </p>
       </div>
 
       {/* Avatar cuadrado con dropdown */}
